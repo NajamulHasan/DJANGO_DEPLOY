@@ -33,7 +33,7 @@ jobs:
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
       - name: Run collectstatic
-        run: python manage.py collectstatic
+        run: python manage.py collectstatic --noinput
      
       - name: run server
         run: python manage.py runserver 8000
