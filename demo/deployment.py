@@ -18,6 +18,13 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+STATIC_URL = '/static/'
+
+# Additional locations of static files
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'myapp', 'static'),
+    # Add other paths to your static files if needed
+]
 
 STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFileStorage'
 STATIC_ROOT=os.path.join(BASE_DIR, 'staticfiles')
