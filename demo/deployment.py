@@ -2,7 +2,7 @@ import os
 from .settings import *
 from .settings import BASE_DIR
 
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = os.environ['SECRET']
 ALLOWED_HOSTs=[os.environ['WEBSITE_HOSTNAME']]
 CSRF_TRUSTED_ORIGINS=['http://'+ os.environ['WEBSITE_HOSTNAME']]
 DEBUG = False
