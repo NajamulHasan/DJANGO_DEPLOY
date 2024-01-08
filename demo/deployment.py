@@ -2,6 +2,8 @@ import os
 from .settings import *
 from .settings import BASE_DIR
 
+AUTH_USER_MODEL = "azuredjangotut.najam"
+
 SECRET_KEY = os.environ['SECRET']
 ALLOWED_HOSTs=[os.environ['WEBSITE_HOSTNAME']]
 CSRF_TRUSTED_ORIGINS=['http://'+ os.environ['WEBSITE_HOSTNAME']]
