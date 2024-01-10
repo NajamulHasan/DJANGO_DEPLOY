@@ -29,7 +29,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': os.environ['AZURE_MYSQL_NAME'],
         'HOST': os.environ['AZURE_MYSQL_HOST'],
-        'USER': os.environ['AZURE_MYSQL_USER'],
+        'USER': os.environ['AZURE_MYSQL_USER'],  
         'PASSWORD': os.environ['AZURE_MYSQL_PASSWORD'],
     }
 }
