@@ -22,10 +22,13 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),  # Corrected the path
 ]
 
-STATIC_URL = "/static/"  # Fixed STATIC_URL
+
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFileStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
 
 DATABASES = {
     'default': {
