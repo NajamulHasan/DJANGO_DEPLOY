@@ -19,7 +19,6 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-STATIC_URL = '/static/'
 STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFileStorage'
 STATIC_ROOT=os.path.join(BASE_DIR, 'staticfiles')
 
