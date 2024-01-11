@@ -9,6 +9,7 @@ DEBUG = True
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -22,12 +23,14 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),  # Corrected the path
 ]
 
-
+STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_URL='/static'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFileStorage'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-
+STORAGES = {
+    # ...
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 MEDIA_URL = '/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
 
