@@ -42,5 +42,6 @@ DATABASES = {
         'HOST': os.environ['AZURE_MYSQL_HOST'],
         'USER': os.environ['AZURE_MYSQL_USER'],
         'PASSWORD': os.environ['AZURE_MYSQL_PASSWORD'],
+        'PORT':'3306',
     }
 }
