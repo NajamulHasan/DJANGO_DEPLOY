@@ -6,6 +6,7 @@ SECRET_KEY = os.environ['SECRET']
 ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']]  # Fixed typo in ALLOWED_HOSTS
 CSRF_TRUSTED_ORIGINS = ['http://' + os.environ['WEBSITE_HOSTNAME']]
 DEBUG = True
+DISABLE_COLLECTSTATIC=1
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
